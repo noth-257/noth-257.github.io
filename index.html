@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <title>Amazon-Style Navbar</title>
-
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -14,7 +12,6 @@
   </head>
   <body>
     <header class="navbar">
-      <!-- LEFT -->
       <div class="nav-left">
         <img
           class="logo"
@@ -30,8 +27,6 @@
           </div>
         </div>
       </div>
-
-      <!-- SEARCH -->
       <div class="search-bar">
         <select>
           <option>All</option>
@@ -47,17 +42,17 @@
         </button>
       </div>
 
-      <!-- LANGUAGE -->
       <div class="language">
         <img
           src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
           alt="India"
         />
-        <span>EN</span>
-        <i class="fa-solid fa-caret-down"></i>
+        <select class="lang">
+          <option>EN</option>
+          <option>हिंदी</option>
+        </select>
       </div>
 
-      <!-- RIGHT -->
       <div class="nav-right">
         <div class="nav-item">
           <span class="small-text">Hello, Sign in</span>
@@ -75,9 +70,55 @@
         </div>
       </div>
     </header>
-    <!-- ▬▬▬ SUBNAV BAR ▬▬▬ -->
     <div class="subnav">
-      <a href="#"><i class="fa-solid fa-bars"></i> All</a>
+      <input type="checkbox" id="menu-toggle" hidden />
+
+      <label for="menu-toggle" class="hamburger">
+        <i class="fa-solid fa-bars"></i> All
+      </label>
+
+      <div class="side-menu">
+        <div class="side-header">
+          <i class="fa-solid fa-user"></i>
+          Hello, sign in
+          <label for="menu-toggle" class="close-btn">✕</label>
+        </div>
+
+        <div class="side-content">
+          <h3>Trending</h3>
+          <a href="#">Best Sellers</a>
+          <a href="#">New Releases</a>
+          <a href="#">Movers and Shakers</a>
+          <hr />
+          <h3>Digital Content and Devices</h3>
+          <a href="#">Echo & Alexa</a>
+          <a href="#">Fire TV</a>
+          <a href="#">Kindle E-Readers & e-Books</a>
+          <a href="#">Audible Audiobooks</a>
+          <a href="#">Amazon Prime Video</a>
+          <a href="#">Amazon Prime Music</a>
+          <hr />
+          <h3>Shoy by Category</h3>
+          <a href="#">Mobiles, Computers</a>
+          <a href="#">TV, Appliances, Electronics</a>
+          <a href="#">Men's Fashion</a>
+          <a href="#">Women's Fashion</a>
+          <hr />
+          <h3>Program & Features</h3>
+          <a href="#">Gifts Cards and Mobile Recharges</a>
+          <a href="#">Amazon Launchpad</a>
+          <a href="#">Amazon Business</a>
+          <a href="#">Handloom and Handicrafts</a>
+          <hr />
+          <h3>Help & Settings</h3>
+          <a href="#">Your Account</a>
+          <a href="#">Customer Services</a>
+          <a href="#">Sign in</a>
+        </div>
+      </div>
+
+      <div class="overlay"></div>
+
       <a href="#">Fresh <i class="fa-solid fa-caret-down"></i></a>
       <a href="#">MX Player</a>
       <a href="#">Sell</a>
@@ -95,7 +136,6 @@
       <a href="#">Computers</a>
       <a href="#">Gift Cards</a>
     </div>
-    <!-- ▬▬▬ HERO BANNER ▬▬▬ -->
     <div class="hero">
       <img
         src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Consumables/X-GL/Feb5/PC_Hero_1_3000._CB582457311_.jpg"
@@ -119,7 +159,6 @@
       />
     </div>
     <section class="shop-section">
-      <!-- CARD 1 -->
       <div class="shop-card">
         <h2>Revamp your home in style</h2>
 
@@ -159,7 +198,6 @@
         <a href="#">Explore all</a>
       </div>
 
-      <!-- CARD 2 -->
       <div class="shop-card">
         <h2>Bulk order discounts + Up to 18% GST savings</h2>
 
@@ -194,7 +232,6 @@
         <a href="#">Create a free account</a>
       </div>
 
-      <!-- CARD 3 -->
       <div class="shop-card">
         <h2>Appliances for your home | Up to 55% off</h2>
 
@@ -223,7 +260,6 @@
         <a href="#">See more</a>
       </div>
 
-      <!-- CARD 4 -->
       <div class="shop-card">
         <h2>Starting ₹149 | Headphones</h2>
 
@@ -253,10 +289,7 @@
       </div>
     </section>
 
-    <!-- SHOP SECTION 2  -->
-
     <section class="shop-section-2">
-      <!-- CARD 1 -->
       <div class="shop-card">
         <h2>Starting ₹49 | Deals on home essentials</h2>
 
@@ -285,7 +318,6 @@
         <a href="#">Explore all</a>
       </div>
 
-      <!-- CARD 2 -->
       <div class="shop-card">
         <h2>Continue Shopping deals</h2>
 
@@ -318,19 +350,25 @@
         <a href="#">See more deals</a>
       </div>
 
-      <!-- CARD 3 -->
       <div class="shop-card full-image-card">
-        <a href="#">
+        <a href="#" class="product-image">
           <img src="assets/shopsection/special.png" alt="Special Offer" />
         </a>
-        <p>
-          RIDE AND DRIVE Wanderlust Motorcycle Saddle Bag, Water-Resistant,
-          Expandable, Reflective Accents
-        </p>
-        <p id="price">₹6,499 <s>₹7999</s></p>
-        <h2>Add to cart</h2>
+
+        <div class="product-info">
+          <p class="product-title">
+            RIDE AND DRIVE Wanderlust Motorcycle Saddle Bag, Water-Resistant,
+            Expandable, Reflective Accents
+          </p>
+
+          <div class="price-row">
+            <span class="current-price">₹6,499</span>
+            <span class="old-price">₹7,999</span>
+          </div>
+
+          <button class="add-to-cart">Add to cart</button>
+        </div>
       </div>
-      <!-- CARD 4 -->
       <div class="shop-card">
         <h2>Automotive essentials | up to 60% off</h2>
 
@@ -448,7 +486,6 @@
         </a>
       </div>
     </section>
-    <!-- RECOMMENDED SECTION-2 -->
     <section class="recommend-section">
       <div class="recommend-header">
         <h2>Related to items you've viewed</h2>
@@ -564,5 +601,267 @@
 
       <span class="sponsored-label">Sponsored</span>
     </section>
+    <section class="recommend-section">
+      <div class="recommend-header">
+        <h2>Best Sellers in Clothing & Accesories</h2>
+        <a href="#">See more</a>
+      </div>
+
+      <div class="recommend-slider">
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/71jA7cZEY-L._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/619xMvtqClL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/71OAvZWN00L._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/81biKixsaDL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/71ZxN4i3-oL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/71I53evweVL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/5160oX6raFL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/61y6vD+CXtL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/71DCFWHFolL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/61hz9cK6gnL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/61l0MoyijTL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/71ETCqzBUVL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+      </div>
+    </section>
+
+    <section class="amazon-live-section">
+      <div class="live-header">
+        <h2>Amazon LIVE - Watch, Chat & Shop LIVE</h2>
+        <a href="#">See more from Amazon Live</a>
+      </div>
+
+      <div class="live-content">
+        <div class="live-video">
+          <span class="live-badge">LIVE</span>
+          <span class="viewers">👁 1.3K</span>
+
+          <div class="video-wrapper">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/4DHecXNMgNA?autoplay=1&mute=1&playsinline=1&controls=0&rel=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+
+          <span class="live-footer">Priyanka Vikas Earns commissions</span>
+        </div>
+
+        <div class="live-products">
+          <a href="#" class="live-product">
+            <img
+              src="https://m.media-amazon.com/images/I/61xdZHs-CvL._SX240_QL100_AC_SCLZZZZZZZ_.jpg"
+            />
+            <p class="title">MARS EURO Nail Lacquer | Glossy Gel Finish</p>
+            <p class="price">₹65 <span>₹69</span></p>
+          </a>
+
+          <a href="#" class="live-product">
+            <img
+              src="https://m.media-amazon.com/images/I/51dHet4RaDL._SX240_QL100_AC_SCLZZZZZZZ_.jpg"
+            />
+            <p class="title">Swiss Beauty Slay Nail Color</p>
+            <span class="deal">15% off</span>
+            <p class="price">₹109 <span>₹129</span></p>
+          </a>
+
+          <a href="#" class="live-product">
+            <img
+              src="https://m.media-amazon.com/images/I/414CncaAgIL._SX240_QL100_AC_SCLZZZZZZZ_.jpg"
+            />
+            <p class="title">Revlon Summer Glossy Finish</p>
+            <p class="price">₹184 <span>₹249</span></p>
+          </a>
+
+          <a href="#" class="live-product">
+            <img
+              src="https://m.media-amazon.com/images/I/71pCphlUAvL._SX240_QL100_AC_SCLZZZZZZZ_.jpg"
+            />
+            <p class="title">Lakme True Wear Glossy</p>
+            <p class="price">₹142 <span>₹150</span></p>
+          </a>
+          <a href="#" class="live-product">
+            <img
+              src="https://m.media-amazon.com/images/I/61XN4MSpbhL._SX240_QL100_AC_SCLZZZZZZZ_.jpg"
+            />
+            <p class="title">Lakme True Wear Glossy</p>
+            <p class="price">₹142 <span>₹150</span></p>
+          </a>
+          <a href="#" class="live-product">
+            <img
+              src="https://m.media-amazon.com/images/I/51QM6B1eK0S._SX240_QL100_AC_SCLZZZZZZZ_.jpg"
+            />
+            <p class="title">Lakme True Wear Glossy</p>
+            <p class="price">₹142 <span>₹150</span></p>
+          </a>
+          <a href="#" class="live-product">
+            <img
+              src="https://m.media-amazon.com/images/I/41QXeTtPptL._SX240_QL100_AC_SCLZZZZZZZ_.jpg"
+            />
+            <p class="title">Lakme True Wear Glossy</p>
+            <p class="price">₹142 <span>₹150</span></p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="amazon-footer">
+      <div class="back-to-top">
+        <a href="#">Back to top</a>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h4>Get to Know Us</h4>
+          <a href="#">About Amazon</a>
+          <a href="#">Careers</a>
+          <a href="#">Press Releases</a>
+          <a href="#">Amazon Science</a>
+        </div>
+
+        <div>
+          <h4>Connect with Us</h4>
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+        </div>
+
+        <div>
+          <h4>Make Money with Us</h4>
+          <a href="#">Sell on Amazon</a>
+          <a href="#">Sell under Amazon Accelerator</a>
+          <a href="#">Protect and Build Your Brand</a>
+          <a href="#">Amazon Global Selling</a>
+          <a href="#">Become an Affiliate</a>
+          <a href="#">Fulfilment by Amazon</a>
+          <a href="#">Advertise Your Products</a>
+          <a href="#">Amazon Pay on Merchants</a>
+        </div>
+
+        <div>
+          <h4>Let Us Help You</h4>
+          <a href="#">Your Account</a>
+          <a href="#">Returns Centre</a>
+          <a href="#">Recalls and Product Safety Alerts</a>
+          <a href="#">100% Purchase Protection</a>
+          <a href="#">Amazon App Download</a>
+          <a href="#">Help</a>
+        </div>
+      </div>
+
+      <div class="footer-middle">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+          alt="Amazon"
+        />
+
+        <div class="footer-buttons">
+          <button>🌐 English</button>
+          <button>🇮🇳 India</button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          <h5>AbeBooks</h5>
+          <p>Books, art & collectibles</p>
+        </div>
+
+        <div>
+          <h5>Amazon Web Services</h5>
+          <p>Scalable Cloud Computing Services</p>
+        </div>
+
+        <div>
+          <h5>Audible</h5>
+          <p>Download Audio Books</p>
+        </div>
+
+        <div>
+          <h5>IMDb</h5>
+          <p>Movies, TV & Celebrities</p>
+        </div>
+      </div>
+
+      <div class="footer-copy">
+        <p>
+          Conditions of Use & Sale | Privacy Notice | Interest-Based Ads
+          <br />
+          © 1996–2025, Amazon.com, Inc. or its affiliates
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

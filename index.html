@@ -2,21 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AmazonClone</title>
-    <link rel="stylesheet" href="project.css" />
+    <title>Amazon-Style Navbar</title>
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+
+    <link rel="stylesheet" href="project.css" />
   </head>
   <body>
-    <!-- navbar -->
     <header class="navbar">
+      <!-- LEFT -->
       <div class="nav-left">
         <img
           class="logo"
           src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
+          alt="Amazon"
         />
 
         <div class="location">
@@ -28,14 +31,23 @@
         </div>
       </div>
 
+      <!-- SEARCH -->
       <div class="search-bar">
         <select>
           <option>All</option>
+          <option>Alexa Skills</option>
+          <option>Amazon Devices</option>
+          <option>Amazon Fashion</option>
+          <option>Books</option>
         </select>
+
         <input type="text" placeholder="Search Amazon.in" />
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </div>
 
+      <!-- LANGUAGE -->
       <div class="language">
         <img
           src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
@@ -45,6 +57,7 @@
         <i class="fa-solid fa-caret-down"></i>
       </div>
 
+      <!-- RIGHT -->
       <div class="nav-right">
         <div class="nav-item">
           <span class="small-text">Hello, Sign in</span>
@@ -83,9 +96,28 @@
       <a href="#">Gift Cards</a>
     </div>
     <!-- ▬▬▬ HERO BANNER ▬▬▬ -->
-    <section class="hero">
-      <img src="assets/image.png" />
-    </section>
+    <div class="hero">
+      <img
+        src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Consumables/X-GL/Feb5/PC_Hero_1_3000._CB582457311_.jpg"
+        alt="Slide 1"
+      />
+      <img
+        src="https://images-eu.ssl-images-amazon.com/images/G/31/sudipta/GW/BAU/Budgetunrec._CB777837018_.jpg"
+        alt="Slide 2"
+      />
+      <img
+        src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Beauty/GW/yesbank/makeup_PC._CB796616147_.png"
+        alt="Slide 3"
+      />
+      <img
+        src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/devjyoti/GW/Uber/Nov/uber_new_high._CB537689643_.jpg"
+        alt="Slide 3"
+      />
+      <img
+        src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Beauty/GW/yesbank/Shampoos__conditioners_pc._CB796616147_.png"
+        alt="Slide 3"
+      />
+    </div>
     <section class="shop-section">
       <!-- CARD 1 -->
       <div class="shop-card">
@@ -93,27 +125,34 @@
 
         <div class="card-grid">
           <div class="item">
-            <img src="assets/img1.png" />
-            <p>Cushion covers, bedsheets & more</p>
+            <a href="#">
+              <img src="assets/shopsection/img1.png" />
+              <p>Cushion covers, bedsheets & more</p>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <img src="assets/shopsection/img2.png" />
+              <p>Figurines, vases & more</p>
+            </a>
           </div>
 
           <div class="item">
-            <img src="assets/img2.png" />
-            <p>Figurines, vases & more</p>
+            <a href="#">
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+              />
+              <p>Home storage</p>
+            </a>
           </div>
 
           <div class="item">
-            <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-            />
-            <p>Home storage</p>
-          </div>
-
-          <div class="item">
-            <img
-              src="https://images.unsplash.com/photo-1505691938895-1758d7feb511"
-            />
-            <p>Lighting solutions</p>
+            <a href="#">
+              <img
+                src="https://images.unsplash.com/photo-1505691938895-1758d7feb511"
+              />
+              <p>Lighting solutions</p>
+            </a>
           </div>
         </div>
 
@@ -133,7 +172,7 @@
           </div>
 
           <div class="item">
-            <img src="assets/img9.png" />
+            <img src="assets/shopsection/img9.png" />
             <p>Up to 60% off | Kitchen appliances</p>
           </div>
 
@@ -161,22 +200,22 @@
 
         <div class="card-grid">
           <div class="item">
-            <img src="assets/img5.png" />
+            <img src="assets/shopsection/img5.png" />
             <p>Air conditioners</p>
           </div>
 
           <div class="item">
-            <img src="assets/img6.png" />
+            <img src="assets/shopsection/img6.png" />
             <p>Refrigerators</p>
           </div>
 
           <div class="item">
-            <img src="assets/img7.png" />
+            <img src="assets/shopsection/img7.png" />
             <p>Microwaves</p>
           </div>
 
           <div class="item">
-            <img src="assets/img8.png" />
+            <img src="assets/shopsection/img8.png" />
             <p>Washing machines</p>
           </div>
         </div>
@@ -190,22 +229,22 @@
 
         <div class="card-grid">
           <div class="item">
-            <img src="assets/boat.png" />
+            <img src="assets/shopsection/boat.png" />
             <p>Starting ₹249 | boAt</p>
           </div>
 
           <div class="item">
-            <img src="assets/boult.png" />
+            <img src="assets/shopsection/boult.png" />
             <p>Starting ₹349 | Boult</p>
           </div>
 
           <div class="item">
-            <img src="assets/noise.png" />
+            <img src="assets/shopsection/noise.png" />
             <p>Starting ₹649 | Noise</p>
           </div>
 
           <div class="item">
-            <img src="assets/zebro.png" />
+            <img src="assets/shopsection/zebro.png" />
             <p>Starting ₹149 | Zebronics</p>
           </div>
         </div>
@@ -213,82 +252,317 @@
         <a href="#">See all offers</a>
       </div>
     </section>
-    <section class="best-sellers">
-      <h2>Best Sellers in Clothing & Accessories</h2>
-      <div class="best-seller-items">
-        <a href="#" class="best-seller-item">
-          <img src="assets/prod1.png" alt="Product 1" />
+
+    <!-- SHOP SECTION 2  -->
+
+    <section class="shop-section-2">
+      <!-- CARD 1 -->
+      <div class="shop-card">
+        <h2>Starting ₹49 | Deals on home essentials</h2>
+
+        <div class="card-grid">
+          <div class="item">
+            <img src="assets/shopsection/img10.png" />
+            <p>Cleaning supplies</p>
+          </div>
+
+          <div class="item">
+            <img src="assets/shopsection/img11.png" />
+            <p>Bathrrom accesories</p>
+          </div>
+
+          <div class="item">
+            <img src="assets/shopsection/img12.png" />
+            <p>Home tools</p>
+          </div>
+
+          <div class="item">
+            <img src="assets/shopsection/img13.png" />
+            <p>Wallpapers</p>
+          </div>
+        </div>
+
+        <a href="#">Explore all</a>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="shop-card">
+        <h2>Continue Shopping deals</h2>
+
+        <div class="card-grid">
+          <div class="item">
+            <a href="#">
+              <img src="assets/shopsection/img18.png" />
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="#">
+              <img src="assets/shopsection/img19.png" />
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="#">
+              <img src="assets/shopsection/img20.png" />
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="#">
+              <img src="assets/shopsection/img21.png" />
+            </a>
+          </div>
+        </div>
+
+        <a href="#">See more deals</a>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="shop-card full-image-card">
+        <a href="#">
+          <img src="assets/shopsection/special.png" alt="Special Offer" />
         </a>
-        <a href="#" class="best-seller-item">
-          <img src="assets/prod2.png" alt="Product 2" />
+        <p>
+          RIDE AND DRIVE Wanderlust Motorcycle Saddle Bag, Water-Resistant,
+          Expandable, Reflective Accents
+        </p>
+        <p id="price">₹6,499 <s>₹7999</s></p>
+        <h2>Add to cart</h2>
+      </div>
+      <!-- CARD 4 -->
+      <div class="shop-card">
+        <h2>Automotive essentials | up to 60% off</h2>
+
+        <div class="card-grid">
+          <div class="item">
+            <img src="assets/shopsection/img14.png" />
+            <p>Cleaning accesories</p>
+          </div>
+
+          <div class="item">
+            <img src="assets/shopsection/img15.png" />
+            <p>Tyre & rim care</p>
+          </div>
+
+          <div class="item">
+            <img src="assets/shopsection/img16.png" />
+            <p>Helmets</p>
+          </div>
+
+          <div class="item">
+            <img src="assets/shopsection/img17.png" />
+            <p>Vacuum cleaner</p>
+          </div>
+        </div>
+
+        <a href="#">See all offers</a>
+      </div>
+    </section>
+    <section class="recommend-section">
+      <div class="recommend-header">
+        <h2>More items to consider</h2>
+        <a href="#">See more</a>
+      </div>
+
+      <div class="recommend-slider">
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/61CsXVlKC5L._AC_SY200_.jpg"
+            alt=""
+          />
         </a>
-        <a href="#" class="best-seller-item">
-          <img src="assets/prod3.png" alt="Product 3" />
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/717k2ruKZlL._AC_SY200_.jpg"
+            alt=""
+          />
         </a>
-        <a href="#" class="best-seller-item">
-          <img src="assets/prod4.png" alt="Product 4" />
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/719PbFaeb9L._AC_SY200_.jpg"
+            alt=""
+          />
         </a>
-        <a href="#" class="best-seller-item">
-          <img src="assets/prod5.png" alt="Product 4" />
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/71L3qleLFsL._AC_SY200_.jpg"
+            alt=""
+          />
         </a>
-        <a href="#" class="best-seller-item">
-          <img src="assets/prod6.png" alt="Product 4" />
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/61MsX4WQH2L._AC_SY200_.jpg"
+            alt=""
+          />
         </a>
-        <a href="#" class="best-seller-item">
-          <img src="assets/prod7.png" alt="Product 4" />
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/61Qfp0Gb6SL._AC_SY200_.jpg"
+            alt=""
+          />
         </a>
-        <a href="#" class="best-seller-item">
-          <img src="assets/prod8.png" alt="Product 4" />
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/61qurhyRAFL._AC_SY200_.jpg"
+            alt=""
+          />
         </a>
-        <a href="#" class="best-seller-item">
-          <img src="assets/prod9.png" alt="Product 4" />
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/51x+HFCbeqL._AC_SY200_.jpg"
+            alt=""
+          />
         </a>
-        <a href="#" class="best-seller-item">
-          <img src="assets/prod10.png" alt="Product 4" />
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/41lRe3TkLtL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/21FrUtPuNUL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/71vIXDqsoAL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/514uSMHfLYL._AC_SY200_.jpg"
+            alt=""
+          />
         </a>
       </div>
     </section>
+    <!-- RECOMMENDED SECTION-2 -->
+    <section class="recommend-section">
+      <div class="recommend-header">
+        <h2>Related to items you've viewed</h2>
+        <a href="#">See more</a>
+      </div>
 
-    <footer class="footer">
-      <div class="footer-cols">
-        <div class="col">
-          <h4>Get to Know Us</h4>
-          <a>About Amazon</a>
-          <a>Careers</a>
-          <a>Press Releases</a>
-          <a>Amazon Science</a>
+      <div class="recommend-slider">
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/41cyufVtIAL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/5143HIuChfL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/61jULnNz6TL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/41NsRYGBn6L._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/51ilE-SOwZL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/61f4xNYFUaL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/51C5YMTFmzL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/41yUm5l759L._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/51JFSagEaAL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/51HfMj9cWlL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/41yUm5l759L._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+        <a href="#" class="recommend-item">
+          <img
+            src="https://m.media-amazon.com/images/I/71qsOT3-ryL._AC_SY200_.jpg"
+            alt=""
+          />
+        </a>
+      </div>
+    </section>
+    <section class="sponsored-section">
+      <div class="sponsored-card">
+        <div class="sponsored-image">
+          <img
+            src="https://m.media-amazon.com/images/I/61YgGSQZ4gL._SX569_.jpg"
+            alt="Sponsored product"
+          />
         </div>
 
-        <div class="col">
-          <h4>Connect with Us</h4>
-          <a>Facebook</a>
-          <a>Twitter</a>
-          <a>Instagram</a>
-        </div>
+        <div class="sponsored-content">
+          <h3 class="sponsored-title">
+            MICROMINI Die-Cast 1:64 Scale Model Car| Metal...
+          </h3>
 
-        <div class="col">
-          <h4>Make Money with Us</h4>
-          <a>Sell on Amazon</a>
-          <a>Advertise Your Products</a>
-          <a>Become an Affiliate</a>
-        </div>
+          <div class="sponsored-price">
+            <span class="current-price">₹2,199</span>
+            <span class="old-price">₹6,999</span>
+            <span class="prime">prime</span>
+          </div>
 
-        <div class="col">
-          <h4>Let Us Help You</h4>
-          <a>Your Account</a>
-          <a>Returns Centre</a>
-          <a>100% Purchase Protection</a>
-          <a>Help</a>
+          <button class="shop-btn">Shop now</button>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <img
-          src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
-          class="logo-footer"
-        />
-        <p>© Amazon Clone - Educational Purposes Only</p>
-      </div>
-    </footer>
+      <span class="sponsored-label">Sponsored</span>
+    </section>
   </body>
 </html>
